@@ -1,0 +1,23 @@
+/* Background */
+body {
+    background-color: #1a1a2e;
+    color: white;
+}
+
+/* User message */
+.user-msg {
+    background-color: #0f3460;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    text-align: right;
+}
+
+/* Bot message */
+.bot-msg {
+    background-color: #16213e;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    text-align: left;
+}

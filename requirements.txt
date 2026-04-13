@@ -1,0 +1,32 @@
+# Core LLM & RAG
+langchain
+langchain-community
+langchain-openai
+groq
+
+# Vector store
+chromadb
+
+# BM25 hybrid search
+rank-bm25
+
+# Code parsing
+tree-sitter
+
+# Repo loading
+gitpython
+
+# Embeddings
+tiktoken
+
+# Frontend
+streamlit
+
+# Environment variables
+python-dotenv
+
+# Utilities
+pandas
+numpy
+tqdm
+pydantic
