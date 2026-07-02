@@ -1,0 +1,46 @@
+include_extensions:
+  - .py
+  - .md
+  - .txt
+  - .json
+  - .toml
+  - .yaml
+  - .yml
+  - .c
+  - .h
+
+exclude_directories:
+  - .git
+  - .github
+  - node_modules
+  - __pycache__
+  - .venv
+  - venv
+  - env
+  - dist
+  - build
+  - target
+  - out
+  - coverage
+  - .pytest_cache
+  - .mypy_cache
+  - .idea
+  - .vscode
+
+exclude_files:
+  - package-lock.json
+  - yarn.lock
+  - poetry.lock
+
+exclude_patterns:
+  - "*.min.js"
+  - "*.pyc"
+  - "*.class"
+  - "*.o"
+  - "*.so"
+  - "*.dll"
+  - "*.exe"
+
+follow_symlinks: false
+
+max_file_size_mb: 5
