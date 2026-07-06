@@ -50,7 +50,7 @@ import numpy as np
 # ts_chunker.Chunk has: file_path, chunk_type, name, qualified_name,
 # start_line, end_line, parent_class, parent_function, language,
 # part_index, total_parts, source
-from ts_chunker import Chunk
+from chunking.ast_chunker import Chunk
 
 
 @dataclass
