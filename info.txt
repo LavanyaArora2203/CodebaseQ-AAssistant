@@ -1,0 +1,5 @@
+"1) Choose an embedding model (e.g. a code-aware embedding model or a general-purpose one) and batch-embed all chunks from Day 2, storing vector + metadata together.
+2) Stand up a vector DB (Chroma, Qdrant, or FAISS + a metadata layer) running locally; write insert/query functions.
+3) Implement metadata filtering at query time: filter by chunk_type (function vs docstring vs comment vs markdown), file extension, directory/module, and recency if you track git blame.
+4) Add hybrid retrieval: combine vector similarity search with a keyword/BM25 pass over function and file names, since code search often needs exact identifier matches, not just semantic similarity.
+5) Write 10-15 realistic test queries a developer would actually ask ('how does authentication work', 'where do I change the retry logic', 'what does the ChunkParser class do') and manually sanity-check retrieved chunks."

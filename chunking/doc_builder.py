@@ -1,5 +1,5 @@
-from metadata_extractor import MetadataExtractor
-from ast_chunker import PythonTSChunker
+from chunking.metadata_extractor import MetadataExtractor
+from chunking.ast_chunker import PythonTSChunker
 
 filepath = "sample_repos\langchain\libs\langchain\scripts\check_imports.py"
 
