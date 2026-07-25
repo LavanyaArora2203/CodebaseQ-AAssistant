@@ -1,0 +1,41 @@
+chunking/
+│
+├── __init__.py
+│
+├── parser.py
+│      # Parse source code into Tree-sitter AST
+│
+├── chunk_extractor.py
+│      # Extract functions, classes, methods from AST
+│
+├── chunk_merger.py
+│      # Merge small sibling chunks up to token budget
+│
+├── metadata.py
+│      # Build metadata for every chunk
+│
+├── models.py
+│      # Dataclasses for Chunk, Symbol, etc.
+│
+├── language_registry.py
+│      # Maps language -> Tree-sitter grammar
+│
+├── token_counter.py
+│      # Estimate token count (tiktoken or heuristic)
+│
+├── pipeline.py
+│      # Main orchestration for chunking
+│
+└── test_chunking.py
+       # End-to-end testing
+
+
+    models.py – define the Chunk and related dataclasses that every other module will use.
+language_registry.py – load and manage Tree-sitter language grammars.
+parser.py – parse source files into ASTs.
+chunk_extractor.py – traverse the AST and extract functions, classes, and methods.
+token_counter.py – estimate or compute token counts.
+chunk_merger.py – merge small sibling chunks up to the token budget.
+metadata.py – construct metadata for each chunk.
+pipeline.py – orchestrate the full chunking workflow.
+test_chunking.py – run an end-to-end validation on a cloned repository.
