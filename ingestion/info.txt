@@ -1,0 +1,19 @@
+GitHub Repository URL
+          │
+          ▼
+  1. Repo Cloner
+          │
+          ▼
+ Local Temporary Repository
+          │
+          ▼
+  2. File Filter
+          │
+          ▼
+  Relevant Source Files
+          │
+          ▼
+ 3. Language Detector
+          │
+          ▼
+Repository Manifest (ready for chunking & parsing)
