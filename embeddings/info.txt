@@ -1,0 +1,13 @@
+| File               | Purpose                         | Responsibilities                                                                                                                                                                                                         |
+| ------------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **`__init__.py`**  | Package initializer             | Makes the `embeddings` folder a Python package and exports the main classes/functions (e.g., `EmbeddingManager`).                                                                                                        |
+| **`embedders.py`** | Embedding model implementations | Contains `BaseEmbedder` and all providers (`VoyageEmbedder`, `QwenEmbedder`, future `JinaEmbedder`, `OpenAIEmbedder`). Each provider knows how to generate embeddings from text.                                         |
+| **`formatter.py`** | Chunk formatting                | Converts AST chunks or documentation chunks into the text that is actually sent to the embedding model. It combines metadata (path, symbol, signature, docstring, etc.) with the code/text to improve retrieval quality. |
+| **`cache.py`**     | Embedding cache                 | Stores embeddings locally (e.g., SQLite or JSON) using a hash of the formatted chunk. Prevents recomputing embeddings for unchanged chunks, making re-indexing much faster.                                              |
+| **`manager.py`**   | Embedding pipeline orchestrator | Main entry point. Formats chunks, checks the cache, batches requests, calls the selected embedding provider, and returns embedding results ready for storage in the vector database.                                     |
+
+
+formatter.py is needed by manager.py.
+cache.py is independent.
+embedders.py depends on nothing.
+manager.py ties everything together.
